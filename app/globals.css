@@ -16,6 +16,7 @@
   --radius-lg: 1rem;
   --radius-md: 0.75rem;
   --radius-sm: 0.5rem;
+  --font-sans: var(--font-marcellus), "Marcellus", serif;
 }
 
 @layer base {
@@ -37,7 +38,7 @@
   body {
     background: linear-gradient(135deg, #f8fcf8 0%, #f5f9f5 100%);
     color: #2c4a3e;
-    font-family: var(--font-inter), "Marcellus", sans-serif;
+    font-family: var(--font-marcellus), "Marcellus", serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

@@ -160,7 +160,7 @@ const ProductsPreview = () => {
           </>
         )}
 
-        <div className="text-center mt-8">
+        <div className="flex items-center justify-center text-center mt-8">
           <Link href="/products">
             <Button variant="primary" size="lg">
               Explore All Products

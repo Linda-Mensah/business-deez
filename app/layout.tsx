@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${marcellus.variable} ${inter.variable} font-sans`}>
+      <body className={`${marcellus.variable} ${inter.variable}`}>
         <SmoothScroll />
         <Navbar />
         <main className="pt-16">{children}</main>
