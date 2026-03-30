@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Droplets className="w-6 h-6 text-[#7CB9A8]" />
-              <h3 className="text-2xl font-bold">Deez Biz</h3>
+              <h3 className="text-2xl text-[#7CB9A8] font-bold">Deez Biz</h3>
             </div>
             <p className="text-white/70">
               Fresh, clean, and gentle products for your family&apos;s everyday

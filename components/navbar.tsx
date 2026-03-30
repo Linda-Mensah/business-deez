@@ -119,8 +119,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <Droplets className="w-6 h-6 text-#5F9E8D group-hover:rotate-12 transition-transform" />
-            <span className="text-2xl font-semibold text-#5F9E8D">
+            <Droplets className="w-6 h-6 text-[#5F9E8D] group-hover:rotate-12 transition-transform" />
+            <span className="text-2xl font-semibold text-[#5F9E8D]">
               Deez Biz
             </span>
           </Link>
