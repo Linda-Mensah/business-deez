@@ -69,7 +69,7 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-      {/* Honeypot field - hidden from users */}
+      {/* honeypot field - hidden from users */}
       <input
         type="text"
         {...register("honeypot")}

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Sparkles } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import ContactForm from "./contact-form";
 
 const ContactSection = () => {
@@ -11,7 +11,7 @@ const ContactSection = () => {
       region: "Greater Accra",
     },
     {
-      address: "Number 9 Street, Nkawkaw, Eastern Region",
+      address: "Nkawkaw, Eastern Region",
       region: "Eastern Region",
     },
   ];
@@ -35,7 +35,6 @@ const ContactSection = () => {
           className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-2 mb-4 shadow-fresh">
-            {/* <Sparkles className="w-4 h-4 text-[#7CB9A8]" /> */}
             <span className="text-sm text-[#2C4A3E]">Let&apos;s Connect</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#2C4A3E] mb-4">
@@ -97,9 +96,8 @@ const ContactSection = () => {
                   <div>
                     <p className="font-medium text-[#2C4A3E]">Business Hours</p>
                     <p className="text-[#2C4A3E]/60">
-                      Monday - Saturday: 8:00 AM - 8:00 PM
+                      Monday - Sunday: 8:00 AM - 8:00 PM
                     </p>
-                    <p className="text-[#2C4A3E]/60">Sunday: Closed</p>
                   </div>
                 </div>
               </div>
