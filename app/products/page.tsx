@@ -8,6 +8,7 @@ import { client } from "@/lib/sanity/client";
 import { ALL_PRODUCTS_QUERY, ALL_CATEGORIES_QUERY } from "@/lib/sanity/queries";
 import { Product, Category } from "@/types";
 import ProductCard from "@/components/product-card";
+import ProductCardSkeleton from "@/components/product-card-skeleton";
 import Button from "@/components/ui/button";
 
 export default function ProductsPage() {
@@ -63,16 +64,8 @@ export default function ProductsPage() {
     setFilteredProducts(filtered);
   }, [selectedCategory, searchQuery, products]);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">Loading products...</div>
-      </div>
-    );
-  }
-
   return (
-    <div className="min-h-screen bg-neutral-50 py-12">
+    <div className="min-h-screen bg-[#F7F4F1] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -80,27 +73,27 @@ export default function ProductsPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl font-bold text-neutral-900 mb-4">
+          <h1 className="text-4xl font-semibold text-[#2B2B2B] mb-4">
             All Products
           </h1>
-          <p className="text-lg text-neutral-600">
+          <p className="text-lg text-[#6B6B6B]">
             Browse our complete collection of quality products
           </p>
         </motion.div>
 
         <div className="mb-8 space-y-4">
           <div className="relative max-w-md mx-auto">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-400 w-5 h-5" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#6B6B6B] w-5 h-5" />
             <input
               type="text"
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-neutral-500 focus:border-transparent outline-none"
+              className="w-full pl-10 pr-4 py-2 border border-[#E5D9D0] rounded-xl focus:ring-2 focus:ring-[#5A3E36] focus:border-transparent outline-none bg-white"
             />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-2 mb-16">
             <Button
               variant={!selectedCategory ? "primary" : "outline"}
               size="sm"
@@ -125,12 +118,19 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        {filteredProducts.length === 0 ? (
+        {loading ? (
+          // Show skeletons while loading
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {[...Array(8)].map((_, i) => (
+              <ProductCardSkeleton key={i} />
+            ))}
+          </div>
+        ) : filteredProducts.length === 0 ? (
           <div className="text-center py-12">
-            <p className="text-neutral-600">No products found.</p>
+            <p className="text-[#6B6B6B]">No products found.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-10">
             {filteredProducts.map((product, index) => (
               <motion.div
                 key={product._id}
