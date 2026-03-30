@@ -6,13 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "cd studio/business-deez && npm install"
+  },
+  "engines": {
+    "node": ">=22.13.0"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@portabletext/react": "^6.0.3",
     "@sanity/client": "^7.20.0",
     "@sanity/image-url": "^2.1.0",
+    "@sanity/vision": "^5.18.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
