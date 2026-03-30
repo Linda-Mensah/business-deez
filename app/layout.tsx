@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Deez Biz",
     description: "Quality products for your home and family",
-    url: "https://deezessence.com",
+    url: "https://deezbiz.com",
     siteName: "Deez Biz",
     locale: "en_US",
     type: "website",

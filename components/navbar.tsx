@@ -125,7 +125,7 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
+          {/* desktop nav */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => {
               const active = isActive(link);
@@ -171,7 +171,7 @@ const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Toggle */}
+          {/* mobile toggle */}
           <button
             className="md:hidden text-[#2B2B2B]"
             onClick={() => setIsOpen(!isOpen)}
@@ -181,7 +181,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* mobile menu */}
         <AnimatePresence>
           {isOpen && (
             <motion.div

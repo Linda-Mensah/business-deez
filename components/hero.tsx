@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Button from "./ui/button";
 import Link from "next/link";
-import { Sparkles, Leaf, Droplets, Wind } from "lucide-react";
+import { Leaf, Droplets, Wind } from "lucide-react";
 
 const Hero = () => {
   return (

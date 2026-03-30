@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Droplets, Heart, Leaf, Sparkles } from "lucide-react";
+import { Droplets, Heart, Leaf } from "lucide-react";
 
 const About = () => {
   const features = [
@@ -35,12 +35,6 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          {/* <div className="inline-flex items-center gap-2 bg-[#F8FCF8] rounded-full px-4 py-2 mb-4 shadow-lg">
-            <Sparkles className="w-4 h-4 text-[#7CB9A8] animate-pulse" />
-            <span className="text-sm text-[#2C4A3E]/90 font-medium tracking-wide">
-              Our Story
-            </span>
-          </div> */}
           <h2 className="text-4xl sm:text-5xl font-extrabold text-[#2C4A3E] mb-4 tracking-tight">
             Pure Care for Every Moment
           </h2>
@@ -58,10 +52,10 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group text-center p-8 bg-gradient-to-br from-[#5F9E8D]/50 to-[#F8FCF8] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 border border-[#E0F0E8] backdrop-blur-sm hover:scale-105"
+              className="group text-center p-8 bg-linear-to-br from-[#5F9E8D]/50 to-[#F8FCF8] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 border border-[#E0F0E8] backdrop-blur-sm hover:scale-105"
             >
               <div
-                className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${feature.color} rounded-2xl mb-6 shadow-lg transition-transform duration-300 group-hover:scale-110`}
+                className={`inline-flex items-center justify-center w-20 h-20 bg-linear-to-r ${feature.color} rounded-2xl mb-6 shadow-lg transition-transform duration-300 group-hover:scale-110`}
               >
                 <feature.icon className="w-10 h-10 text-white" />
               </div>
@@ -80,7 +74,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-[#F8FCF8]/80 to-[#F0F6F0]/80 rounded-3xl p-10 relative overflow-hidden shadow-sm"
+          className="text-center bg-linear-to-r from-[#F8FCF8]/80 to-[#F0F6F0]/80 rounded-3xl p-10 relative overflow-hidden shadow-sm"
         >
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 left-0 w-40 h-40 bg-[#7CB9A8]/20 rounded-full blur-3xl" />
